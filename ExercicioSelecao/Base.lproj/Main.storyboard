@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,60 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExercicioSelecao" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o5t-hN-xku">
+                                <rect key="frame" x="41.5" y="358.5" width="331" height="179"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A10-hP-4Gj" customClass="RoundedBorderButton" customModule="ExercicioSelecao" customModuleProvider="target">
+                                <rect key="frame" x="107.5" y="557.5" width="199" height="45"/>
+                                <color key="backgroundColor" red="0.30980392156862746" green="0.64313725490196072" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="17"/>
+                                <state key="normal" title="Get time!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getTimeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="peX-tN-orm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6U-2m-xjk">
+                                <rect key="frame" x="157" y="652.5" width="100" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="u3r-Tb-Jvt"/>
+                                    <constraint firstAttribute="width" constant="100" id="wIy-5C-5OW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="o5t-hN-xku" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="67S-LO-TUE"/>
+                            <constraint firstItem="A10-hP-4Gj" firstAttribute="height" secondItem="o5t-hN-xku" secondAttribute="height" multiplier="0.25" id="9uv-wr-cqO"/>
+                            <constraint firstItem="A10-hP-4Gj" firstAttribute="width" secondItem="o5t-hN-xku" secondAttribute="width" multiplier="0.6" id="ADQ-Ah-aVH"/>
+                            <constraint firstItem="A10-hP-4Gj" firstAttribute="top" secondItem="o5t-hN-xku" secondAttribute="bottom" constant="20" id="L1N-0B-ZGd"/>
+                            <constraint firstItem="v6U-2m-xjk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RBb-ZU-hmv"/>
+                            <constraint firstItem="o5t-hN-xku" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="hqx-A5-uIa"/>
+                            <constraint firstItem="A10-hP-4Gj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qeb-MO-FtT"/>
+                            <constraint firstItem="o5t-hN-xku" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tng-tQ-8bs"/>
+                            <constraint firstItem="v6U-2m-xjk" firstAttribute="top" secondItem="A10-hP-4Gj" secondAttribute="bottom" constant="50" id="xsS-ip-YOH"/>
+                            <constraint firstItem="o5t-hN-xku" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="yeZ-C0-i1l"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="getTimeButton" destination="A10-hP-4Gj" id="D4m-K3-MXX"/>
+                        <outlet property="goImageView" destination="o5t-hN-xku" id="Q9Y-2U-rvZ"/>
+                        <outlet property="lastNumberLabel" destination="v6U-2m-xjk" id="9ma-LP-Fhf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
 </document>
